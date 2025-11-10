@@ -1,0 +1,34 @@
+body{
+  background: rgb(51, 51, 51);
+
+}
+
+p,label,h2{
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+}
+
+#verifica {
+  background-color: black;
+  padding:  10px 10px 10px 10px;
+  border: 1px solid;
+  opacity: 0.5;
+  color: white;
+  border-radius: 10px;
+}
+
+#verifica:hover{
+  border-radius: 2px;
+  animation-duration: 0.5s;
+  animation-name: slideout;
+  animation-fill-mode: forward;
+}
+@keyframes slideout {
+  from {
+    border-radius: 10px;
+  }
+
+  to {
+    border-radius: 2px;
+  }
+}

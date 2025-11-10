@@ -1,0 +1,13 @@
+<html>
+    <head><link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}"  type="text/css">
+    </head>
+        <body>
+        {% if sphamm == 'spam' %}
+        <p align="center"><font id="spham" color="red" size="100"> Spam </font></p>
+        {% endif %}
+        {% if sphamm == 'ham'%}
+        <p align="center"><font id="spham" color="white" size="100"> Ham </font></p>
+        {% endif%}
+        <p align="center"><font id="acc" align="center" size="50"> {{acc}} %</font></p>
+        </body>
+</html>

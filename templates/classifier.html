@@ -1,0 +1,62 @@
+<html>
+<head>
+  <title> Naive bayes Classifier </title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/textbox.css') }}" type="text/css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/radio.css') }}" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<br><br><br>
+</head>
+<script type="text/javascript">
+function enable(f){
+  f.browse.hidden=false;
+}
+function disable(f){
+  f.browse.hidden=true;
+}
+</script>
+<form method="post" name="ask" enctype="multipart/form-data">
+<h2 align="center">Naïve Bayes Classifier</h2>
+  <div class="container">
+
+
+
+    <div class="group" align="center">
+      <input id ="inp" type="text" name="msg" required>
+      <span class="highlight"></span>
+      <span class="bar"></span>
+      <label id="lbl">Inserisci messaggio</label>
+    </div>
+
+    <ul>
+      <div align="center">
+    <li>
+
+      <input type="radio" id="f-option" name="selector" onClick="return disable(this.form)">
+      <label for="f-option">Usa il nostro dataset</label>
+
+      <div class="check"></div>
+
+    </li>
+    </div>
+    <div align="center">
+    <li>
+      <input type="radio" id="s-option" name="selector" onClick="return enable(this.form)">
+      <label for="s-option">Usa il tuo dataset</label>
+
+      <div class="check"><div class="inside"></div></div>
+      <input type="hidden" name="MAX_FILE_SIZE" value="1000000">
+      <input type="file" name="browse" hidden="true"></input><br>
+    </li>
+  </div>
+  </ul>
+
+  <br>
+  <div align="center">
+  <input type="submit" value="verifica" id="verifica" align="center"></input>
+</div>
+
+  </div>
+
+</form>
+</html>
